@@ -1,0 +1,63 @@
+[user]
+    name = Alex Galletti
+    email = agalletti@bluechipww.com
+[push]
+    default = simple
+[diff]
+    tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[merge]
+    tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
+[core]
+    excludesfile = ~/.gitignore
+    editor = subl -n -w
+[alias]
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    s = status -s
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    p = !"git pull; git submodule foreach git pull origin master"
+    c = clone --recursive
+    ca = !git add -A && git commit -av
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+    amend = commit --amend --reuse-message=HEAD
+    contributors = shortlog --summary --numbered
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = green
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[diff]
+    renames = copies
+[help]
+    autocorrect = 1
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+    insteadOf = "github:"
+[url "git@gist.github.com:"]
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"

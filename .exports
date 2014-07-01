@@ -1,0 +1,11 @@
+export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export EDITOR="subl";
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+export LESS_TERMCAP_md="${yellow}";
+export MANPAGER="less -X";
+export GREP_OPTIONS="--color=auto";

@@ -1,0 +1,32 @@
+# System
+*~
+.AppleDouble
+.LSOverride
+_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Development
+.grunt
+.vagrant/
+.sass-cache
+bower_components
+node_modules
+.DS_Store
+composer.phar
+composer.lock
+sftp-config.json
+*.sublime-workspace
+.svn/
+_notes
+dwsync.xml
