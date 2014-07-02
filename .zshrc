@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="robbyrussell"
+ZSH_THEME="philips"
 
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
