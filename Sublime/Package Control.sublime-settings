@@ -1,0 +1,25 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
+		"Emmet",
+		"Git",
+		"Laravel Blade Highlighter",
+		"Sass",
+		"SFTP",
+		"Solarized Color Scheme",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"SublimeLinter-pylint",
+		"Swift",
+		"Theme - Spacegray",
+		"Twig"
+	]
+}

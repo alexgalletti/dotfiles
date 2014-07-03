@@ -20,9 +20,9 @@ Thumbs.db
 .grunt
 .vagrant/
 .sass-cache
+vendor
 bower_components
 node_modules
-.DS_Store
 composer.phar
 composer.lock
 sftp-config.json
