@@ -326,7 +326,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # Use Solarized theme by default in Terminal.app
 TERM_PROFILE='Solarized Dark';
-open "${TERM_PROFILE}.terminal";
+open "Mac/Terminal/${TERM_PROFILE}.terminal";
+open "Mac/Terminal/Solarized Light.terminal";
 sleep 1; # Wait a bit to make sure the theme is loaded
 defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
 defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
@@ -392,7 +393,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r Sublime/* ~/Library/Application\ Support/Sublime\ Text.app/Packages/User/
+cp -r Mac/Sublime/* ~/Library/Application\ Support/Sublime\ Text.app/Packages/User/
 
 # Install Sublime Text CLI
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl

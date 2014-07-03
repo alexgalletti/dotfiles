@@ -2,24 +2,30 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"ApacheConf.tmLanguage",
 		"BracketHighlighter",
 		"DocBlockr",
 		"Dotfiles Syntax Highlighting",
 		"Emmet",
+		"FileDiffs",
+		"Gist",
 		"Git",
+		"ImprovedSQL",
+		"INI",
 		"Laravel Blade Highlighter",
+		"nginx",
 		"Sass",
 		"SFTP",
 		"Solarized Color Scheme",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
+		"SublimeLinter-contrib-jslint",
+		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-csslint",
-		"SublimeLinter-jshint",
 		"SublimeLinter-php",
-		"SublimeLinter-pylint",
-		"Swift",
 		"Theme - Spacegray",
-		"Twig"
+		"Twig",
+		"Xdebug Client"
 	]
 }
