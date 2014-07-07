@@ -1,0 +1,4 @@
+{
+  "git_binary": "/usr/local/git/bin/git",
+  "non_blocking": true
+}

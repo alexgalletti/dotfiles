@@ -30,7 +30,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sh <(curl https://j.mp/spf13-vim3 -L);
 fi;
 
-read -p "This will overwrite any existing dot files in your home directory. Are you sure? (y/n) " -n 1;
+read -p "Would you like to install/overwrite dotfiles? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     rsync --exclude ".git/" --exclude "Mac/" --exclude ".DS_Store" --exclude ".osx" --exclude "bootstrap.sh" --exclude "readme.markdown" -avh --no-perms . ~;
