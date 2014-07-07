@@ -1,0 +1,3 @@
+colorscheme solarized
+set nofoldenable
+let g:DisableAutoPHPFolding = 1

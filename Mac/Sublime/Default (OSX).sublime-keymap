@@ -5,5 +5,7 @@
     { "keys": ["super+ctrl+a"], "command": "alignment" },
     { "keys": ["ctrl+super+l"], "command": "sublimelinter_show_all_errors" },
     { "keys": ["super+alt+]"], "command": "reindent", "args": {"single_line": false} },
-    { "keys": ["super+alt+["], "command": "noop" }
+    { "keys": ["super+alt+["], "command": "noop" },
+    { "keys": ["shift+alt+up"], "command": "scroll_lines", "args": {"amount": 40.0} },
+    { "keys": ["shift+alt+down"], "command": "scroll_lines", "args": {"amount": -40.0} }
 ]
