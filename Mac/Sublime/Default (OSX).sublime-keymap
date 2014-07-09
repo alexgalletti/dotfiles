@@ -8,5 +8,6 @@
     { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -40.0} },
     { "keys": ["super+ctrl+a"], "command": "alignment" },
     { "keys": ["ctrl+super+l"], "command": "sublimelinter_show_all_errors" },
+    { "keys": ["ctrl+r"], "command": "xdebug_continue", "args": {"command": "run"} },
     { "keys": ["ctrl+b"], "command": "xdebug_breakpoint" }
 ]
