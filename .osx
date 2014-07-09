@@ -315,7 +315,7 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreade
 #defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
 # Disable inline attachments (just show the icons)
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool false
 
 ###############################################################################
 # Terminal                                                                    #
