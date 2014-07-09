@@ -430,4 +430,12 @@ defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
 # Allow closing the 'new tweet' window by pressing `Esc`
 defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
 
+###############################################################################
+# SpamSieve.app                                                               #
+###############################################################################
+
+# Hide icon on startup
+/usr/libexec/PlistBuddy /Applications/SpamSieve.app/Contents/Info.plist -c "Set LSUIElement 1"
+codesign -f -s - /Applications/SpamSieve.app
+
 echo "Done. Note that most of these changes require a logout/restart to take effect."
