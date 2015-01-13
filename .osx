@@ -387,7 +387,6 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 # Disable smart quotes as it's annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
-
 ###############################################################################
 # Sublime Text                                                                #
 ###############################################################################
@@ -401,10 +400,6 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
-
-# Use `~/Downloads/Torrents` to store incomplete downloads
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
 
 # Don't prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
