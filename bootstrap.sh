@@ -14,7 +14,7 @@ if [[ "$OS" == "Darwin" ]]; then
     read -p "Would you like to install Brew? (y/n) " -n 1;
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)";
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi;
 
     read -p "Would you like to install OSX defaults? (y/n) " -n 1;
