@@ -24,9 +24,9 @@ vendor
 bower_components
 node_modules
 composer.phar
-composer.lock
 sftp-config.json
 *.sublime-workspace
+*.sublime-project
 .svn/
 _notes
 dwsync.xml
