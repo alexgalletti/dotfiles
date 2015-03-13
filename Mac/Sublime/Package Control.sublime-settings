@@ -1,4 +1,7 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Alignment",
@@ -17,6 +20,7 @@
 		"INI",
 		"Laravel Blade Highlighter",
 		"nginx",
+		"Package Control",
 		"Sass",
 		"SFTP",
 		"Solarized Color Scheme",
@@ -26,6 +30,7 @@
 		"SublimeLinter-contrib-jslint",
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-csslint",
+		"SublimeLinter-json",
 		"SublimeLinter-php",
 		"Theme - Spacegray",
 		"Twig",
