@@ -6,6 +6,7 @@
 	[
 		"Alignment",
 		"ApacheConf.tmLanguage",
+		"Babel",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"DocBlockr",
@@ -22,7 +23,6 @@
 		"nginx",
 		"Package Control",
 		"Sass",
-		"SFTP",
 		"Solarized Color Scheme",
 		"SublimeCodeIntel",
 		"SublimeLinter",
