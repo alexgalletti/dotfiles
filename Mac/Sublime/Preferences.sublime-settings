@@ -19,8 +19,7 @@
 	],
 	"folder_exclude_patterns":
 	[
-		".git",
-		"node_modules"
+		".git"
 	],
 	"font_face": "Menlo",
 	"font_size": 12.0,
