@@ -19,6 +19,7 @@
 [core]
     excludesfile = ~/.gitignore
     editor = subl -n -w
+    ignorecase = false
 [alias]
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
     s = status -s
