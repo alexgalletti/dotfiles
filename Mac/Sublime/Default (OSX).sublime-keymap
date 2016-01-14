@@ -4,6 +4,7 @@
     { "keys": ["super+shift+,"], "command": "open_file", "args": {"file": "${packages}/User/Default (OSX).sublime-keymap"} },
     { "keys": ["super+alt+]"], "command": "reindent", "args": {"single_line": false} },
     { "keys": ["super+alt+["], "command": "noop" },
+    { "keys": ["super+shift+d"], "command": "soft_undo" },
     { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 40.0} },
     { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -40.0} },
     { "keys": ["super+ctrl+a"], "command": "alignment" },
