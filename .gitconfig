@@ -1,38 +1,54 @@
 [user]
     name = Alex Galletti
     email = agalletti@bluechipww.com
-[push]
-    default = simple
-[diff]
-    tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-    prompt = false
-[merge]
-    tool = Kaleidoscope
-[mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
-[mergetool]
-    prompt = false
+[alias]
+    # View abbreviated SHA, description, and history graph
+    l = log --graph --decorate --all --pretty="format:%C(yellow)%h %Creset[%C(cyan)%an%Creset] [%Cred%cr%Creset] %s"
+    # View the current working tree status using the short format
+    s = status -s
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    # Pull in remote changes for the current repository and all its submodules
+    p = !"git pull; git submodule foreach git pull origin master"
+    # Clone a repository including all submodules
+    c = clone --recursive
+    # Commit all changes
+    ca = !git add -A && git commit -av
+    # Switch to a branch, creating it if necessary
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+    # Credit an author on the latest commit
+    credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+    # Interactive rebase with the given number of latest commits
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+    # Remove the old tag with this name and tag the latest commit with it.
+    retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+    # Find branches containing commit
+    fb = "!f() { git branch -a --contains $1; }; f"
+    # Find tags containing commit
+    ft = "!f() { git describe --always --contains $1; }; f"
+    # Find commits by source code
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    # Find commits by commit message
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    # Remove branches that have already been merged with master
+    # a.k.a. ‘delete merged’
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    # List contributors with number of commits
+    contributors = shortlog --summary --numbered
 [core]
     excludesfile = ~/.gitignore
     editor = subl -n -w
     ignorecase = false
-[alias]
-    l = log --graph --decorate --all --pretty="format:%C(yellow)%h %Creset[%C(cyan)%an%Creset] [%Cred%cr%Creset] %s"
-    s = status -s
-    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-    p = !"git pull; git submodule foreach git pull origin master"
-    c = clone --recursive
-    ca = !git add -A && git commit -av
-    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-    tags = tag -l
-    branches = branch -a
-    remotes = remote -v
-    amend = commit --amend --reuse-message=HEAD
-    contributors = shortlog --summary --numbered
+    trustctime = false
+    precomposeunicode = false
+[help]
+    autocorrect = 1
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -48,8 +64,16 @@
     untracked = cyan
 [diff]
     renames = copies
-[help]
-    autocorrect = 1
+    tool = Kaleidoscope
+[difftool]
+    prompt = false
+[push]
+    default = simple
+[merge]
+    tool = Kaleidoscope
+    log = true
+[mergetool]
+    prompt = false
 [url "git@github.com:"]
     insteadOf = "gh:"
     pushInsteadOf = "github:"
@@ -67,4 +91,10 @@
     path =
 [mergetool "sourcetree"]
     cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
     trustExitCode = true
