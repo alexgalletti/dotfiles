@@ -1,5 +1,0 @@
-{
-    "configs_folder": "Servers",
-    "hidden_formats": false,
-    "diff_command": ["/usr/local/bin/ksdiff", "--diff", "{local}", "--no-snapshot", "{remote}"]
-}

@@ -1,0 +1,2 @@
+## Dotfiles ##
+Run `./bootstrap.sh`

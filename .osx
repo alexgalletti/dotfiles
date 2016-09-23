@@ -325,14 +325,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool false
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Use Solarized theme by default in Terminal.app
-TERM_PROFILE='Solarized Dark';
-open "Mac/Terminal/${TERM_PROFILE}.terminal";
-open "Mac/Terminal/Solarized Light.terminal";
-sleep 1; # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
-defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
-
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
@@ -392,46 +384,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Sublime Text                                                                #
 ###############################################################################
 
-# Install Sublime Text settings
-cp -r Mac/Sublime/* ~/Library/Application\ Support/Sublime\ Text.app/Packages/User/
-
 # Install Sublime Text CLI
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-
-###############################################################################
-# Transmission.app                                                            #
-###############################################################################
-
-# Don't prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
-
-###############################################################################
-# Twitter.app                                                                 #
-###############################################################################
-
-# Disable smart quotes as it's annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
-
-# Enable the hidden 'Develop' menu
-defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
-
-# Allow closing the 'new tweet' window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
-
-###############################################################################
-# SpamSieve.app                                                               #
-###############################################################################
-
-# Hide icon on startup
-/usr/libexec/PlistBuddy /Applications/SpamSieve.app/Contents/Info.plist -c "Set LSUIElement 1"
-codesign -f -s - /Applications/SpamSieve.app
 
 echo "Done. Note that most of these changes require a logout/restart to take effect."
