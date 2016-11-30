@@ -3,7 +3,7 @@
     email = agalletti@bluechipww.com
 [alias]
     # View abbreviated SHA, description, and history graph
-    l = log --graph --decorate --all --pretty="format:%C(yellow)%h %Creset[%C(cyan)%an%Creset] [%Cred%cr%Creset] %s"
+    l = "log --graph --decorate --all --pretty='format:%C(yellow)%h %Creset[%C(cyan)%an%Creset] [%Cred%cr%Creset] %s'"
     # View the current working tree status using the short format
     s = status -s
     # Show the diff between the latest commit and the current state
